@@ -1,0 +1,113 @@
+{
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+            },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name":"ptex2pdf",
+            "command": "ptex2pdf",
+            "args": [
+                "-l",
+                "-ot",
+                "-kanji=utf8 -synctex=1",
+                "-interaction=nonstopmode",
+                "%DOC%"
+            ]
+        },
+        {
+            "name":"ptex2pdf (uplatex)",
+            "command": "ptex2pdf",
+            "args": [
+                "-l",
+                "-u",
+                "-ot",
+                "-kanji=utf8 -synctex=1",
+                "-interaction=nonstopmode",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pbibtex",
+            "command": "pbibtex",
+            "args": [
+                "-kanji=utf8",
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "ptex2pdf (uplatex)",
+            "tools": [
+                "ptex2pdf (uplatex)",
+            ]
+        },
+        {
+            "name": "ptex2pdf",
+            "tools": [
+                "ptex2pdf"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex",
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+            ]
+        },
+        {
+            "name": "ptex2pdf -> pbibtex -> ptex2pdf",
+            "tools": [
+                "ptex2pdf",
+                "pbibtex",
+                "ptex2pdf",
+            ]
+        },
+        {
+            "name": "ptex2pdf (uplatex) -> pbibtex -> ptex2pdf (uplatex)",
+            "tools": [
+                "ptex2pdf (uplatex)",
+                "pbibtex",
+                "ptex2pdf (uplatex)",
+            ]
+        }
+    ]
+}
